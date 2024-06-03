@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developed Varun</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e9e6056e4f.js" crossorigin="anonymous"></script>    
+    <style>
+       .navbar {
+            font-size: 20px;
+            background-color: rgba(255, 255, 255, 0.9); 
+            font-family: Arial, Helvetica, sans-serif;
+        }
+       .navbar-brand,.nav-link {
+            color: #000000; 
+        }
+        .navbar-light .navbar-nav .nav-link {
+          color: #302f2f;
+        }
+        #active{
+            color: #ffffff;
+            background-color: #007bff;
+            border-radius: 10px;
+        }
+       .dropdown-menu {
+            background-color: #fff; 
+        }
+        .dropdown-item:hover{
+            background-color: #007bff;
+            color: #f5f5f5; 
+            transform: scale(0.9);
+        }
+        .nav-link:hover{
+            background-color: #007bff;
+            color: #f5f5f5; 
+            transform: scale(1.05);
+            border-radius: 10px;
+        }
+        .carousel-item {
+            height: 90vh;
+        }
+        .carousel-inner >.carousel-item > img {
+         width: 640px; 
+         height: 360px; 
+         object-fit: cover;
+        }
+        .carousel-item img {
+            filter: brightness(50%); 
+        }
+        .carousel-caption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .headingText {
+            font-size: 50px;
+        }
+
+        .paraText {
+            font-size: 20px;
+            color: #d6cdcd;
+        }
+
+        #features{
+            background-color: #f7f7f9;
+        }
+        .text-para{
+            font-family:  Arial, Helvetica, sans-serif;
+        }
+        .icon i {
+            font-size: 3rem; 
+            color: #464040; 
+            transition: color 0.3s, transform 0.3s; 
+        }
+        .title-head{
+            color: #007bff;
+        }
+        .card-custom {
+            min-height: 350px; 
+            transition: transform 0.3s ease-in-out;
+        }
+        .card-custom:hover .icon i{
+            color: #007bff; 
+            transform: scale(1.05);
+        }
+        .card-custom:hover {
+            transform: scale(1.05);
+        }
+        #movetop {
+            position: fixed;
+            bottom: 20px; 
+            right: 20px; 
+            z-index: 9999; 
+            animation: pulse 1s infinite alternate; 
+        }
+        @keyframes pulse {
+            0% {
+            transform: scale(1);
+            }
+            100% {
+            transform: scale(1.2);
+            }
+        }
+        .card {
+      overflow: hidden;
+    }
+
+    .card:hover img {
+      transform: scale(1.05);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    #portfolio {
+      background-color: aliceblue;
+    }
+
+    .portfolio-filter .btn.active {
+      background-color: #007bff;
+      color: white;
+    }
+
+    /* Facts Style */
+    .tab-wrap {
+      background-color: #FD8F91 !important;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      animation: bounceIn 1.5s;
+    }
+
+    .tab-pane {
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    .fatsDiv {
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+
+    #tabList {
+      color: aqua;
+    }
+
+    #nav-tabs {
+      color: aqua;
+    }
+
+    .fatsDiv a {
+      transition: transform 0.3s ease, width 0.3s ease;
+      background-color: #0077ff;
+      color: rgb(215, 224, 250);
+    }
+
+    .fatsDiv a.active,
+    .fatsDiv a:hover {
+      background-color: #ffffff;
+      color: #000000;
+      border-radius: 0px 100px 100px 0px;
+      transform: scale(1.1) translateX(5px);
+      width: calc(100% + 20px);
+    }
+
+
+    .fadeIn {
+      animation: fadeIn 1s;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes bounceIn {
+      0% {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+
+      60% {
+        transform: scale(1.2);
+        opacity: 1;
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .tab-content {
+      border: 2px solid #ff9800;
+      border-radius: 15px;
+      background: linear-gradient(45deg, #42a5f5, #478ed1);
+      color: white;
+      padding: 20px;
+    }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg fixed-top navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/TPS-Logo-New.png" alt="Logo" width="100" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-center ">
+                    <li class="nav-item">
+                        <a class="nav-link " href="https://stubbornvarun0705.github.io/tps/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" id="active" href="https://stubbornvarun0705.github.io/tps/products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://stubbornvarun0705.github.io/tps/schools.html">Schools</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://stubbornvarun0705.github.io/tps/testimonials.html">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">FAQ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Company
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                            <li><a class="dropdown-item" href="https://stubbornvarun0705.github.io/tps/about-us.html">About Us</a></li>
+                            <li><a class="dropdown-item" href="https://stubbornvarun0705.github.io/tps/contact-us.html">Contact</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="px-5">
+                <a id="linkbtnMember" class="btn btn-outline-secondary " href="http://www.elearnoncloud.com/login/EL_Login.aspx?C=TPS" target="_blank">Members</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <section id="portfolio" class="mt-5 pt-5 px-5">
+        <div class="container-fuild mx-5 px-5">
+          <div class="d-flex justify-content-center">
+            <ul class="portfolio-filter list-unstyled d-flex">
+              <li><a class="btn btn-default active" href="#" data-filter="*">All Products</a></li>
+              <li><a class="btn btn-default" href="#" data-filter=".maths">Maths Wiz</a></li>
+              <li><a class="btn btn-default" href="#" data-filter=".english">English Wiz</a></li>
+              <li><a class="btn btn-default" href="#" data-filter=".doctor">Maths Doctor</a></li>
+            </ul>
+          </div>
+          <div class="row d-flex justify-content-center" id="portfolio-items">
+            <div class="card card-img px-0 mx-4 my-2 maths" style="width: 250px;">
+              <img src="images/portfolio/thumb/item2.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Maths Wiz</h5>
+                <p class="card-text">Maths Wiz is a <strong>teaching, testing and revision program</strong> supporting the
+                  school curriculum...</p>
+                <div class="view-btn" style="cursor: pointer;" data-message="Maths Wiz is a &quot;teaching, testing and revision program&quot; the school curriculum. It utilises the power of the computer to engage children, making learning interactive and fun.
+              <ul>
+                <li>Multisensory learning - combines seeing, listening and doing.</li>
+                <li>Used in schools for advanced, intermediate and intervention students.</li>
+                <li>Supports school curriculum.</li>
+                <li>Interactive tutorials for every lesson." </li>
+                  </ul>
+                  <i class="fa-solid fa-eye fa-fade me-1" style="color: #007bff;"></i>View
+                </div>
+              </div>
+            </div>
+            <div class="card card-img px-0 mx-4 my-2 english" style="width: 250px;">
+              <img src="images/portfolio/thumb/item1.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">English Wiz</h5>
+                <p class="card-text">English wiz is fun and engaging, and uses teaching methods which are educationally well
+                  established...</p>
+                <div class="view-btn" style="cursor: pointer;" data-message="English wiz is fun and engaging, and uses teaching methods which are educationally well established and sound to cover all the language skills: phonics, spelling, grammar, punctuation, comprehension, vocabulary, creative writing, literature, and poetry analysis.
+              <ul>
+                <li>Multisensory learning - combines seeing, listening and doing.</li>
+                <li>Interactive tutorials for every lesson.</li>
+                <li>Instant feedback for every question.</li>
+                <li>Includes text and passages from world-renowned children's author Penny Dolan.<br>Comprehension passages.</li>
+                <li>Text analysis<br>Creative writing." </li>
+                  </ul>
+                  <i class="fa-solid fa-eye fa-fade me-1" style="color: #007bff;"></i>View
+                </div>
+              </div>
+            </div>
+            <div class="card card-img px-0 mx-4 my-2 maths" style="width: 250px;">
+              <img src="images/portfolio/thumb/item3.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Maths Wiz :</h5>
+                <p class="card-text">
+                <ol>
+                  <li>Junior Primary</li>
+                  <li>Upper Primary</li>
+                  <li>Secondary Maths</li>
+                  <li>Senior Maths</li>
+                </ol>
+                </p>
+                <div class="view-btn" style="cursor: pointer;" data-message="
+              <h3>Junior Primary:</h3>
+                <ul>
+                  <li>Combines reading, listening, learning and playing</li>
+                  <li>Recorded voices for beginner readers</li>
+                </ul>
+                <h3>Upper Primary:</h3>
+                <ul>
+                  <li>Watch your child gain confidence and self-esteem</li>
+                  <li>Look and listen - animations and commentaries</li>
+                </ul>
+                <h3>Secondary Maths:</h3>
+                <ul>
+                  <li>Never get struck - every question is fully explained</li>
+                  <li>A very structured course, supporting the curriculum</li>
+                </ul>
+                <h3>Senior Maths:</h3>
+                <ul>
+                  <li>Improve your maths and your options</li>
+                  <li>Structured with interactive help</li>
+                </ul>"><i class="fa-solid fa-eye fa-fade me-1" style="color: #007bff;"></i>View</div>
+              </div>
+            </div>
+            <div class="card card-img px-0 mx-4 my-2 english" style="width: 250px;">
+              <img src="images/portfolio/thumb/item4.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">English Wiz :</h5>
+                <p class="card-text">
+                <ol>
+                  <li>English Wiz 1</li>
+                  <li>English Wiz 2</li>
+                  <li>English Wiz 3</li>
+                  <li>English Wiz 4</li>
+                </ol>
+                </p>
+                <div class="view-btn" style="cursor: pointer;" data-message="
+              <h3>English Wiz 1:</h3>
+                <ul>
+                  <li>Beginner reading for the crucial early years of school</li>
+                  <li>Combines reading, listening, learning and playing</li>
+                </ul>
+                <h3>English Wiz 2:</h3>
+                <ul>
+                  <li>Spelling</li>
+                  <li>Vocabulary</li>
+                  <li>Sentence Building</li>
+                </ul>
+                <h3>English Wiz 3:</h3>
+                <ul>
+                  <li>Comprehension</li>
+                  <li>Spelling</li>
+                  <li>Grammar</li>
+                </ul>
+                <h3>English Wiz 4:</h3>
+                <ul>
+                  <li>Comprehension</li>
+                  <li>Dictated Spelling Tests</li>
+                  <li>Classic Literature</li>
+                </ul>"><i class="fa-solid fa-eye fa-fade me-1" style="color: #007bff;"></i>View</div>
+                </ul>
+              </div>
+            </div>
+            <div class="card px-0 mx-4 my-2 doctor" style="width: 250px;">
+              <img src="images/portfolio/thumb/item5.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Maths Doctor</h5>
+                <p class="card-text">Maths Doctor is an Online Diagnostic Tool that pinpoints exactly what your children
+                  know and do not know ...</p>
+                <div class="view-btn" style="cursor: pointer;" data-message="Maths Doctor is an Online Diagnostic Tool that pinpoints exactly what your children know and do not know, in just 45mins.<br/><br/>
+              Maths Doctor uses Artificial Intelligence which adjusts the difficulty of the assessment. This unique feature allows the assessment to go back and forward through the curriculum to identify any knowledge gaps across 4 years of the curriculum.<br/><br/>
+              <ul>
+                <li>Designed for children at any level from Foundation (Kinder) to Year 10.</li>
+                <li>Pinpoints the strengths and weaknesses in all strands of the curriculum.</li>
+                <li>Assesses multiple grade levels including the current grade and 3 grades previous.</li>
+              </ul>"><i class="fa-solid fa-eye fa-fade me-1" style="color: #007bff;"></i>View</div>
+              </div>
+            </div>
+            <div class="card card-img px-0 mx-4 my-2 doctor" style="width: 250px;">
+              <img src="images/portfolio/thumb/item6.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Maths Doctor Reports</h5>
+                <p class="card-text">
+                <ol>
+                  <li>Brick wall of learning</li>
+                  <li>Areas of study</li>
+                  <li>Topic gaps</li>
+                </ol>
+                </p>
+                <div class="view-btn" style="cursor: pointer;"
+                  data-message="      <h3>Report 1: Brick wall of learning</h3>
+              <p>The brick wall of learning report provides a quick visual of a student's understanding level of the 4 year levels assessed by Maths Doctor. The brown bricks represent the percentage of topics (not questions) correctly understood by the student when completing Maths Doctor.</p>
+              <h3>Report 2: Areas of study</h3>
+              <p>Breaks down the brick wall of learning report into areas of study:Space;Number;Algebra;Measurement;and Probability and Statistics. This report is very usefull to teachers and tutors so that they can quickly view the areas of study the child needs to focus on.</p>
+                <h3>Report 3: Topic gaps</h3>
+                <p>Lists by year level all the topics identified by Maths Doctor as requiring extra attention. Using this list, teachers and tutors are able to more quickly focus to the learning needs of the child. In Maths Wiz, we have linked lessons and activities to the outcomes (topics) assessed by Maths Doctor.</p>">
+                  <i class="fa-solid fa-eye fa-fade me-1" style="color: #007bff;"></i>View
+                </div>
+              </div>
+            </div>
+            <div class="card card-img px-0 mx-4 my-2 english" style="width: 250px;">
+              <img src="images/portfolio/thumb/item7.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Tips for using English Wiz</h5>
+                <p class="card-text">
+                <ol>
+                  <li>Take up the challenge - inspiring and fun!</li>
+                </ol>
+                </p>
+                <div class="view-btn" style="cursor: pointer;" data-message="
+              <ol>
+                <li>Take up the challenge - inspiring and fun!</li>
+                <li>English Wiz is fun to do and you can learn very quickly, because the computer corrects you immediately</li>
+                <li>Easy drag-and-drop or typing on screen - so you see as it would be written - helping your visual memory.</li>
+                <li>It's a good idea to do some writing too. For example, you can copy out the spelling lists on paper. This will help you to remember. Or you can copy out your answers and even write down some ideas of your own!</li>
+                <li>Have a go at the Hangman games. There are one thousand words in the Secondary School Hangman. It's great for learning &quot;blends&quot; and doing crossword puzzles. But don't guess - use your spelling skills!</li>
+              </ol>">
+                  <i class="fa-solid fa-eye fa-fade me-1" style="color: #007bff;"></i>View
+                </div>
+              </div>
+            </div>
+            <div class="card card-img px-0 mx-4 my-2 maths" style="width: 250px;">
+              <img src="images/portfolio/thumb/item8.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Tips for Maths Wiz</h5>
+                <p class="card-text">
+                <ol>
+                  <li>Warm up with the educational games, to get in the zone....</li>
+                </ol>
+                </p>
+                <div class="view-btn" style="cursor: pointer;" data-message="
+               <ol>
+                <li>Warm up with the educational games, to get in the zone.</li>
+                <li>Go into &quot;My Study Room&quot; and do your Set Activities for the week.</li>
+                <li>Don't rush! Think. Check your answer before you click &quot;OK&quot;.</li>
+                <li>If you are struck, click on the Tutorial or the Solution button. Never guess! You might as well be asleep if you are guessing.</li>
+                <li>Write out your workings in an exercise book. This is good practise for homework.</li>
+                <li>If you get an answer wrong, check out the right answer so that you do better on the next question.</li>
+                <li>So just go for it - you can do it!</li>
+              </ol>">
+                  <i class="fa-solid fa-eye fa-fade me-1" style="color: #007bff;"></i>View
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+        <!-- Modal -->
+      <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="background-color: #6195d1; color: #fff;">
+          <div class=" px-3 py-2">
+            <button type="button" class="close text-white" id="closeModal" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="modalBody">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+      <div class="container border rounded mt-5 my-3 py-3 tab-wrap">
+    <div class="col">
+      <h3 class="mx-3 text-center">FACTS ABOUT MATHS WIZ AND ENGLISH WIZ</h3>
+    </div>
+    <div class="row">
+      <div class="col-auto">
+        <ul id="tabList" class="nav flex-column nav-tabs border">
+          <li class="nav-item fatsDiv"><a href="#tab1" data-toggle="tab" class="nav-link active border">Fact 1:</a></li>
+          <li class="nav-item fatsDiv"><a href="#tab2" data-toggle="tab" class="nav-link border">Fact 2:</a></li>
+          <li class="nav-item fatsDiv"><a href="#tab3" data-toggle="tab" class="nav-link border">Fact 3:</a></li>
+          <li class="nav-item fatsDiv"><a href="#tab4" data-toggle="tab" class="nav-link border">Fact 4:</a></li>
+          <li class="nav-item fatsDiv"><a href="#tab5" data-toggle="tab" class="nav-link border">Fact 5:</a></li>
+          <li class="nav-item fatsDiv"><a href="#tab6" data-toggle="tab" class="nav-link border">Fact 6:</a></li>
+          <li class="nav-item fatsDiv"><a href="#tab7" data-toggle="tab" class="nav-link border">Fact 7:</a></li>
+          <li class="nav-item fatsDiv"><a href="#tab8" data-toggle="tab" class="nav-link border">Fact 8:</a></li>
+        </ul>
+      </div>
+      <div class="col-8">
+        <div id="tabContent" class="tab-content">
+          <div class="tab-pane active fadeIn" id="tab1">
+            <h4 class="text-center"><span class="glyphicon glyphicon-check" style="color:#348001;"></span> Victoria
+              University uses Maths Wiz to help its undergraduates learn how to teach maths in primary school.</h4>
+          </div>
+          <div class="tab-pane fadeIn" id="tab2">
+            <h4 class="text-center"><span class="glyphicon glyphicon-check" style="color:#348001;"></span> Maths Wiz and
+              English Wiz are used by families in India, Australia, UK, Canada, USA, Malaysia, and New Zealand.</h4>
+          </div>
+          <div class="tab-pane fadeIn" id="tab3">
+            <h4 class="text-center"><span class="glyphicon glyphicon-check" style="color:#348001;"></span> Maths Wiz and
+              English Wiz includes over 30,000 questions, over 800 lessons, over 200 randomly generated tests, and over
+              70 games.</h4>
+          </div>
+          <div class="tab-pane fadeIn" id="tab4">
+            <h4 class="text-center"><span class="glyphicon glyphicon-check" style="color:#348001;"></span> The current
+              version of Maths Wiz and English Wiz are a result of a combined effort of over 175 man-years, since
+              starting development in 1989.</h4>
+          </div>
+          <div class="tab-pane fadeIn" id="tab5">
+            <h4 class="text-center"><span class="glyphicon glyphicon-check" style="color:#348001;"></span> Maths Wiz and
+              English supports all the key areas of studies.</h4>
+          </div>
+          <div class="tab-pane fadeIn" id="tab6">
+            <h4 class="text-center"><span class="glyphicon glyphicon-check" style="color:#348001;"></span> Maths Wiz and
+              English Wiz programs are in over 1,000 schools.</h4>
+          </div>
+          <div class="tab-pane fadeIn" id="tab7">
+            <h4 class="text-center"><span class="glyphicon glyphicon-check" style="color:#348001;"></span> Written with
+              teachers and examiners.</h4>
+          </div>
+          <div class="tab-pane fadeIn" id="tab8">
+            <h4 class="text-center"><span class="glyphicon glyphicon-check" style="color:#348001;"></span> Maths Doctor
+              was developed with multiple tutors, teachers, and programmers. It took two years and many design changes
+              until the assessment met our objective to accurately identify knowledge gaps across multiple years of the
+              curriculum in less than one hour.</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+      <footer class="footer bg-dark text-white">
+        <section class="footer-inner-main py-5">
+          <div class="container py-md-4">
+            <div class="row">
+              <div class="col-lg-4 pe-lg-5">
+                <div class="container mt-4 pt-lg-2">
+                    <div class="row align-items-center">
+                      <div class="col-auto">
+                        <h2>
+                          <a class="navbar-brand" href="index.html">
+                            <img src="images/TPS-Logo-New.png" style="width: inherit; height: inherit" alt="Logo">
+                          </a>
+                        </h2>
+                      </div>
+                      <!-- Right side: Social media icons -->
+                      <div class="col-auto">
+                        <ul class="social d-flex justify-content-end align-items-center" style="list-style: none; padding: 0; margin: 0;">
+                          <li class="me-3">
+                            <a href="https://www.facebook.com/#" class="facebook">
+                              <i class="fa-brands fa-facebook fa-2xl"></i>
+                            </a>
+                          </li>
+                          <li class="me-3">
+                            <a href="https://linkedin.com/#" class="linkedin">
+                              <i class="fa-brands fa-linkedin fa-2xl"></i>
+                            </a>
+                          </li>
+                          <li class="me-3">
+                            <a href="https://twitter.com/#" class="twitter">
+                              <i class="fa-brands fa-square-x-twitter fa-2xl"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://google.com/#" class="google">
+                              <i class="fa-solid fa-envelope fa-2xl"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div> 
+              </div>
+            </div>
+            <div class="below-section mt-lg-5 pt-lg-4">
+              <div class="copyright-footer">
+                    <p class="text-white">
+                        <i class="fa-solid fa-square-phone fa-beat fa-2xl" style="color: #007bff;"></i> &nbsp;Call us any time +91(80) 4090 5848
+                    </p>
+                <p class="CopyRights copyright-column">
+                  &copy; 2024 All Rights Reserved | Thought Process Systems LLP
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </footer>
+      <button onclick="topFunction()" id="movetop" title="Go to top" class="btn btn-primary rounded-circle shadow btn-lg">
+        <i class="fa-solid fa-arrow-turn-up"></i>
+          </button>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+          scrollFunction();
+        };
+  
+        function scrollFunction() {
+          if (
+            document.body.scrollTop > 20 ||
+            document.documentElement.scrollTop > 20
+          ) {
+            document.getElementById("movetop").style.display = "block";
+          } else {
+            document.getElementById("movetop").style.display = "none";
+          }
+        }
+  
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+    var viewButtons = document.querySelectorAll('.view-btn');
+    viewButtons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        var message = button.getAttribute('data-message');
+        document.getElementById('modalBody').innerHTML = message;
+        $('#infoModal').modal('show');
+      });
+    });
+
+    var filterButtons = document.querySelectorAll('.portfolio-filter a');
+    filterButtons.forEach(function(button) {
+      button.addEventListener('click', function(e) {
+        e.preventDefault();
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        var filter = button.getAttribute('data-filter');
+        var items = document.querySelectorAll('#portfolio-items .card');
+        items.forEach(function(item) {
+          if (filter === '*' || item.classList.contains(filter.substr(1))) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+
+          // Close modal functionality
+          var closeModal = document.getElementById('closeModal');
+    closeModal.addEventListener('click', function() {
+        $('#infoModal').modal('hide');
+    });
+
+  });
+
+
+
+
+  $(document).ready(function(){
+    $('.portfolio-filter a').click(function(){
+      // Get the filter value
+      var filterValue = $(this).attr('data-filter');
+      
+      // Show all cards if filter is *
+      if(filterValue === '*') {
+        $('.card').show();
+      } else {
+        // Hide all cards
+        $('.card').hide();
+        // Show only the cards that match the filter
+        $(filterValue).show();
+      }
+      
+      // Update active class
+      $('.portfolio-filter a').removeClass('active');
+      $(this).addClass('active');
+      
+      return false;
+    });
+  });
+
+
+  $(document).ready(function(){
+      var tabs = $('#tabList').find('a[data-toggle="tab"]');
+      var activeTab = 0;
+
+      function showNextTab() {
+        activeTab = (activeTab + 1) % tabs.length;
+        $(tabs[activeTab]).tab('show');
+      }
+
+      setInterval(showNextTab, 3000);
+    });
+      </script>
+      
+    
+    
+
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+<script>
+    $(document).ready(function(){
+        // Function to check if the user is in the carousel section
+        function isInCarousel() {
+            var carousel = $('#carouselslide');
+            var scrollPosition = $(window).scrollTop();
+            var carouselTop = carousel.offset().top;
+            var carouselBottom = carouselTop + carousel.outerHeight();
+
+            return (scrollPosition >= carouselTop && scrollPosition <= carouselBottom);
+        }
+
+        //  navigation bar style based on user's position
+        function updateNavbarStyle() {
+            var navbar = $('.navbar');
+            if (isInCarousel()) {
+                navbar.addClass('bg-transparent').removeClass('bg-light');
+            } else {
+                navbar.addClass('bg-light').removeClass('bg-transparent');
+            }
+        }
+
+        // Call updateNavbarStyle initially and on scroll
+        updateNavbarStyle();
+        $(window).scroll(updateNavbarStyle);
+    });
+</script>
+</body>
+</html>

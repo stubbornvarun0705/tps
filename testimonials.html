@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developed Varun</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/e9e6056e4f.js" crossorigin="anonymous"></script>
+    <style>
+      body{
+        background-color: #fdde0d;
+      }
+       .navbar {
+            font-size: 20px;
+            background-color: #ffffffe6; 
+            font-family: Arial, Helvetica, sans-serif;
+        }
+       .navbar-brand,.nav-link {
+            color: #333; 
+        }
+        #active{
+            color: #ffffff;
+            background-color: #007bff;
+            border-radius: 10px;
+        }
+       .dropdown-menu {
+            background-color: #fff; 
+        }
+        .dropdown-item:hover{
+            background-color: #007bff;
+            color: #f5f5f5; 
+            transform: scale(0.9);
+        }
+        .nav-link:hover{
+            background-color: #007bff;
+            color: #f5f5f5; 
+            transform: scale(1.05);
+            border-radius: 10px;
+        }
+        .carousel-item {
+            height: 90vh;
+        }
+        .carousel-inner >.carousel-item > img {
+         width: 640px; 
+         height: 360px; 
+         object-fit: cover;
+        }
+        .carousel-item img {
+            filter: brightness(50%); 
+        }
+        .carousel-caption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .headingText {
+            font-size: 50px;
+        }
+
+        .paraText {
+            font-size: 20px;
+            color: #d6cdcd;
+        }
+
+        #features{
+            background-color: #f7f7f9;
+        }
+        .text-para{
+            font-family:  Arial, Helvetica, sans-serif;
+        }
+        .icon i {
+            font-size: 3rem; 
+            color: #464040; 
+            transition: color 0.3s, transform 0.3s; 
+        }
+        .title-head{
+            color: #007bff;
+        }
+        .card-custom {
+            min-height: 350px; 
+            transition: transform 0.3s ease-in-out;
+        }
+        .card-custom:hover .icon i{
+            color: #007bff; 
+            transform: scale(1.05);
+        }
+        .card-custom:hover {
+            transform: scale(1.05);
+        }
+        #movetop {
+            position: fixed;
+            bottom: 20px; 
+            right: 20px; 
+            z-index: 9999; 
+            animation: pulse 1s infinite alternate; 
+        }
+        @keyframes pulse {
+            0% {
+            transform: scale(1);
+            }
+            100% {
+            transform: scale(1.2);
+            }
+        }
+
+        .testimonial-card {
+            margin-bottom: 30px;
+        }
+        .testimonial-image {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg fixed-top navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/TPS-Logo-New.png" alt="Logo" width="100" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-center ">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://stubbornvarun0705.github.io/tps/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://stubbornvarun0705.github.io/tps/products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  href="https://stubbornvarun0705.github.io/tps/schools.html">Schools</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" id="active" aria-current="page" href="https://stubbornvarun0705.github.io/tps/testimonials.html">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">FAQ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Company
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                            <li><a class="dropdown-item" href="https://stubbornvarun0705.github.io/tps/about-us.html">About Us</a></li>
+                            <li><a class="dropdown-item" href="https://stubbornvarun0705.github.io/tps/contact-us.html">Contact</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="px-5">
+                <a id="linkbtnMember" class="btn btn-outline-secondary " href="http://www.elearnoncloud.com/login/EL_Login.aspx?C=TPS" target="_blank">Members</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+        
+
+    <div class="container-fuild px-5 mx-5 mt-5 pt-5 ">
+      <div class="row d-flex justify-content-around">
+          <div class="col-lg-3 col-md-5 col-sm-12 text-white bg-primary rounded mb-3">
+              <div class="d-flex flex-column">
+                  <h1 class="text-center" style="background-color: #0d6efd;">Student Success Stories</h1>
+                  <div class="col">
+                      <div class="row-lg-3 row-md-6 row-sm-12 testimonial-card ">
+                          <div class="card">
+                              <img src="images/ts_sherry.png" class="card-img-top rounded-circle mx-auto testimonial-image" alt="Sherry">
+                              <div class="card-body">
+                                  <h4 class="card-text text-muted text-center ">Sherry, Commerce/Law</h4>
+                                  <p class="card-text text-secondary">"I found the software to be equivalent to a personal tutor for me."</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row-lg-3 row-md-6 row-sm-12 testimonial-card">
+                          <div class="card">
+                              <img src="images/ts_jenny.png" class="card-img-top rounded-circle mx-auto testimonial-image" alt="Jenny">
+                              <div class="card-body">
+                                  <h4 class="card-text text-muted text-center">Jenny, Medicine</h4>
+                                  <p class="card-text text-secondary">"Maths and English Wiz was a help because it allowed for the practice of coursework in a way that enabled the identification of weak areas of knowledge and the strengthening of those areas. It also gave another angle at which to view the information studied and hence improve explanations when answering questions."</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row-lg-3 row-md-6 row-sm-12 testimonial-card">
+                          <div class="card">
+                              <img src="images/ts_inggrid.png" class="card-img-top rounded-circle mx-auto testimonial-image" alt="Inggrid">
+                              <div class="card-body">
+                                  <h4 class="card-text text-muted text-center">Inggrid, Dental Health</h4>
+                                  <p class="card-text text-secondary">"Wiz' programs assisted me with school and were easy to use. I found that what I had learned at school was reinforced with the lessons in the program when I got back home. It allows you to review any key concepts at home so you can be sure you understand them. I liked the fact that it allowed me to prepare for outcomes and exams. It made me feel confident in that I felt I covered every aspect of the course."</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row-lg-3 row-md-6 row-sm-12 testimonial-card">
+                          <div class="card">
+                              <img src="images/ts_hemal.png" class="card-img-top rounded-circle mx-auto testimonial-image" alt="Hemal">
+                              <div class="card-body">
+                                  <h4 class="card-text text-muted text-center">Hemal, Dentistry</h4>
+                                  <p class="card-text text-secondary">"I used Maths and English Wiz to consolidate the work that I had learnt. It was really good for filling in the blanks which I hadn't understood before – because the program explained in a different way, which I could understand better. The program was really helpful for finding clear explanations about the things we needed to know, instead of having to read through the textbook to try and find the relevant bits."</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row-lg-3 row-md-6 row-sm-12 testimonial-card">
+                          <div class="card">
+                              <img src="images/ts_premal.png" class="card-img-top rounded-circle mx-auto testimonial-image" alt="Premal">
+                              <div class="card-body">
+                                  <h4 class="card-text text-muted text-center">Premal, Pharmacy</h4>
+                                  <p class="card-text text-secondary">"Not only were there heaps of exam type examples, but also the program offered step-by-step solutions. It allowed me to constantly test myself and keep a track of my improvement."</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row-lg-3 row-md-6 row-sm-12 testimonial-card">
+                          <div class="card">
+                              <img src="images/ts_ebony.png" class="card-img-top rounded-circle mx-auto testimonial-image" alt="Ebony">
+                              <div class="card-body">
+                                  <h4 class="card-text text-muted text-center">Ebony, Grade 5 Student</h4>
+                                  <p class="card-text text-secondary">"Maths Wiz is really exciting, it never gets boring... When I started using Maths Wiz, it was fantastic, I went from a C to a B minus, to a B plus, to an A."</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 text-white bg-primary rounded mb-3">
+              <div class="d-flex flex-column">
+                  <h1 class="text-center">Educational Bodies and Authorities</h1>
+                  <div class="col">
+                      <div class="row-lg-3 row-md-6 row-sm-12 testimonial-card">
+                          <div class="card">
+                              <img src="images/ts_apf.png" class="card-img-top rounded-circle mx-auto testimonial-image" alt="Sherry">
+                              <div class="card-body">
+                                  <h4 class="card-text text-muted text-center">Christopher Cotching, President of the Australian Principals Federation</h4>
+                                  <p class="card-text text-secondary">"I am impressed by Thought Process’s passion and commitment to provide state of the art, curriculum based, educational programs that places it at the forefront of emerging personalised approaches to learning and pedagogy. Children are able to learn at their own pace while the teacher can closely monitor each child’s progress against relevant student outcomes."</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row-lg-3 row-md-6 row-sm-12 testimonial-card">
+                          <div class="card">
+                              <img src="images/ts_aamt_sml.png" class="card-img-top rounded-circle mx-auto testimonial-image" alt="Jenny">
+                              <div class="card-body">
+                                  <h4 class="card-text text-muted text-center">Will Morony, AAMT Executive Officer</h4>
+                                  <p class="card-text text-secondary">"Thought Process shows a commitment to building children's confidence in their Maths, and that is something the AAMT sees as very important to any student's progress."</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row-lg-3 row-md-6 row-sm-12 testimonial-card">
+                          <div class="card">
+                              <img src="images/ts_peter.png" class="card-img-top rounded-circle mx-auto testimonial-image" alt="Inggrid">
+                              <div class="card-body">
+                                  <h4 class="card-text text-muted text-center">Peter Blasina (The Gadget Guy), Technology Reporter</h4>
+                                  <p class="card-text text-secondary">"Best Educational Program." As featured on Sunrise television breakfast program.</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row-lg-3 row-md-6 row-sm-12 testimonial-card">
+                          <div class="card">
+                              <img src="images/ts_shephard.png" class="card-img-top rounded-circle mx-auto testimonial-image" alt="Premal">
+                              <div class="card-body">
+                                  <h4 class="card-text text-muted text-center">Dr Peter Shephard, Ph. D., D. Lit -Leading Authority on the Psychology of Learning</h4>
+                                  <p class="card-text text-secondary">"You can learn at your own pace; and then it's not like when a teacher asks you a question, you get it wrong, then you get embarrassed. Here, the computer asks you and doesn't judge you. If you get it wrong, you just simply go back, learn a bit more progressively; so, it's a very safe way of learning, and yet it’s fun at the same time. It's interactive."</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row-lg-3 row-md-6 row-sm-12 testimonial-card">
+                          <div class="card">
+                              <img src="images/ts_janet.png" class="card-img-top rounded-circle mx-auto testimonial-image" alt="Ebony">
+                              <div class="card-body">
+                                  <h4 class="card-text text-muted text-center">Dr Janet Hall, Clinical and Counselling Psychologist</h4>
+                                  <p class="card-text text-secondary">"A lot of children start off school just as smart as any other but for some reason their readiness isn’t available for them to learn something that might be a maths series or some phonics or some reading and then they never get to catch up. They’re always feeling that they’re not good enough. They’re always feeling that the other kids are smarter than them and they need some special help... Maths and English Wiz can give parents a great sense of direction and a sense of structured involvement, which will give them great satisfaction."</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-12 text-white bg-primary rounded mb-3">
+              <div class="d-flex flex-column">
+                  <h1 class="text-center">Parents and Teachers</h1>
+                  <div class="col">
+                      <div class="row-lg-3 row-md-6 row-sm-12 testimonial-card">
+                          <div class="card">
+                              <img src="images/ts_stpeters.png" class="card-img-top rounded-circle mx-auto testimonial-image" alt="Sherry">
+                              <div class="card-body">
+                                  <h4 class="card-text text-muted text-center">Peter Hurst, Teacher and Maths Coordinator</h4>
+                                  <p class="card-text text-secondary">"The increase in confidence was quite remarkable. In fact, kids that had no confidence had started contributing in the classroom. They were particularly proud to show that they had grasped some concepts which the 'smarter' kids were finding difficult! Symmetry was one such example."</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row-lg-3 row-md-6 row-sm-12 testimonial-card">
+                          <div class="card">
+                              <img src="images/ts_hockingps.png" class="card-img-top rounded-circle mx-auto testimonial-image" alt="Jenny">
+                              <div class="card-body">
+                                  <h4 class="card-text text-muted text-center">Leena Sheth, School Teacher</h4>
+                                  <p class="card-text text-secondary">"On a personal level and as a teacher who genuinely loves maths, I have no hesitation in recommending Maths Wiz to anyone who is looking for a comprehensive and extensive maths programme for school children to improve their maths skills, understanding of key concepts as well as boosting their confidence and self-esteem."</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row-lg-3 row-md-6 row-sm-12 testimonial-card">
+                          <div class="card">
+                              <img src="images/ts_george.png" class="card-img-top rounded-circle mx-auto testimonial-image" alt="Inggrid">
+                              <div class="card-body">
+                                  <h4 class="card-text text-muted text-center">George Moran, School Principal</h4>
+                                  <p class="card-text text-secondary">"I am most impressed that, using the program, the students have successfully learnt difficult concepts without the 'hard work' which is generally associated with learning maths through conventional methods. They feel that they are succeeding and success breeds success."</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row-lg-3 row-md-6 row-sm-12 testimonial-card">
+                          <div class="card">
+                              <img src="images/ts_nancarrow.png" class="card-img-top rounded-circle mx-auto testimonial-image" alt="Hemal">
+                              <div class="card-body">
+                                  <h4 class="card-text text-muted text-center">Richard, Father of 6-year-old Olivia</h4>
+                                  <p class="card-text text-secondary">"Olivia has been using Maths Wiz and English Wiz for five months now and she absolutely loves it. She is going in to grade one this year and is already doing grade three maths and reading grade two books. Not only has it improved her numeracy and literacy it has grown her computer skills."</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row-lg-3 row-md-6 row-sm-12 testimonial-card">
+                          <div class="card">
+                              <img src="images/ts_jane.png" class="card-img-top rounded-circle mx-auto testimonial-image" alt="Hemal">
+                              <div class="card-body">
+                                  <h4 class="card-text text-muted text-center">Jane, Parent of Year 9 student</h4>
+                                  <p class="card-text text-secondary">"I enrolled in the Maths and English Wiz Programs for my daughter Robyn who was then 15 years of age doing Year 9. Robyn was a struggling student in both Maths and English. Robyn started using the programs immediately and managed to pass her first maths test in two years! She came from a failing 12% from the previous maths test to a passing 51% on her subsequent maths test."</p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row-lg-3 row-md-6 row-sm-12 testimonial-card">
+                          <div class="card">
+                              <img src="images/ts_mrsmann.png" class="card-img-top rounded-circle mx-auto testimonial-image" alt="Premal">
+                              <div class="card-body">
+                                  <h4 class="card-text text-muted text-center">Mrs. Mann, Mother of 2 Children</h4>
+                                  <p class="card-text text-secondary">"I have referred other families to this program and recommend it for anyone who wants to see their children enjoy the learning process and give them a competitive edge at school."</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+      <footer class="footer bg-dark text-white">
+        <section class="footer-inner-main py-5">
+          <div class="container py-md-4">
+            <div class="row">
+              <div class="col-lg-4 pe-lg-5">
+                <div class="container mt-4 pt-lg-2">
+                    <div class="row align-items-center">
+                      <div class="col-auto">
+                        <h2>
+                          <a class="navbar-brand" href="index.html">
+                            <img src="images/TPS-Logo-New.png" style="width: inherit; height: inherit" alt="Logo">
+                          </a>
+                        </h2>
+                      </div>
+                      <!-- Right side: Social media icons -->
+                      <div class="col-auto">
+                        <ul class="social d-flex justify-content-end align-items-center" style="list-style: none; padding: 0; margin: 0;">
+                          <li class="me-3">
+                            <a href="https://www.facebook.com/#" class="facebook">
+                              <i class="fa-brands fa-facebook fa-2xl"></i>
+                            </a>
+                          </li>
+                          <li class="me-3">
+                            <a href="https://linkedin.com/#" class="linkedin">
+                              <i class="fa-brands fa-linkedin fa-2xl"></i>
+                            </a>
+                          </li>
+                          <li class="me-3">
+                            <a href="https://twitter.com/#" class="twitter">
+                              <i class="fa-brands fa-square-x-twitter fa-2xl"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://google.com/#" class="google">
+                              <i class="fa-solid fa-envelope fa-2xl"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div> 
+              </div>
+            </div>
+            <div class="below-section mt-lg-5 pt-lg-4">
+              <div class="copyright-footer">
+                    <p class="text-white">
+                        <i class="fa-solid fa-square-phone fa-beat fa-2xl" style="color: #007bff;"></i> &nbsp;Call us any time +91(80) 4090 5848
+                    </p>
+                <p class="CopyRights copyright-column">
+                  &copy; 2024 All Rights Reserved | Thought Process Systems LLP
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </footer>
+      <button onclick="topFunction()" id="movetop" title="Go to top" class="btn btn-primary rounded-circle shadow btn-lg">
+        <i class="fa-solid fa-arrow-turn-up"></i>
+          </button>
+      
+      <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+          scrollFunction();
+        };
+  
+        function scrollFunction() {
+          if (
+            document.body.scrollTop > 20 ||
+            document.documentElement.scrollTop > 20
+          ) {
+            document.getElementById("movetop").style.display = "block";
+          } else {
+            document.getElementById("movetop").style.display = "none";
+          }
+        }
+  
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+      </script>
+      
+    
+    
+
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        // Function to check if the user is in the carousel section
+        function isInCarousel() {
+            var carousel = $('#carouselslide');
+            var scrollPosition = $(window).scrollTop();
+            var carouselTop = carousel.offset().top;
+            var carouselBottom = carouselTop + carousel.outerHeight();
+
+            return (scrollPosition >= carouselTop && scrollPosition <= carouselBottom);
+        }
+
+        //  navigation bar style based on user's position
+        function updateNavbarStyle() {
+            var navbar = $('.navbar');
+            if (isInCarousel()) {
+                navbar.addClass('bg-transparent').removeClass('bg-light');
+            } else {
+                navbar.addClass('bg-light').removeClass('bg-transparent');
+            }
+        }
+
+        // Call updateNavbarStyle initially and on scroll
+        updateNavbarStyle();
+        $(window).scroll(updateNavbarStyle);
+    });
+</script>
+</body>
+</html>

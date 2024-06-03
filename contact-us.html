@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developed Varun</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/e9e6056e4f.js" crossorigin="anonymous"></script>
+    <style>
+       .navbar {
+            font-size: 20px;
+            background-color: rgba(255, 255, 255, 0.9); 
+            font-family: Arial, Helvetica, sans-serif;
+        }
+       .navbar-brand,.nav-link {
+            color: #333; 
+        }
+        #active{
+            color: #ffffff;
+            background-color: #007bff;
+            border-radius: 10px;
+        }
+       .dropdown-menu {
+            background-color: #fff; 
+        }
+        .dropdown-item:hover{
+            background-color: #007bff;
+            color: #f5f5f5; 
+            transform: scale(0.9);
+        }
+        .nav-link:hover{
+            background-color: #007bff;
+            color: #f5f5f5; 
+            transform: scale(1.05);
+            border-radius: 10px;
+        }
+        .carousel-item {
+            height: 90vh;
+        }
+        
+        .carousel-inner >.carousel-item > img {
+         width: 640px; 
+         height: 360px; 
+         object-fit: cover;
+        }
+        .carousel-item img {
+            filter: brightness(50%); 
+        }
+        .carousel-caption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .headingText {
+            font-size: 50px;
+        }
+
+        .paraText {
+            font-size: 20px;
+            color: #d6cdcd;
+        }
+
+        #features{
+            background-color: #f7f7f9;
+        }
+        .text-para{
+            font-family:  Arial, Helvetica, sans-serif;
+        }
+        .icon i {
+            font-size: 3rem; 
+            color: #464040; 
+            transition: color 0.3s, transform 0.3s; 
+        }
+        .title-head{
+            color: #007bff;
+        }
+        .card-custom {
+            min-height: 350px; 
+            transition: transform 0.3s ease-in-out;
+        }
+        .card-custom:hover .icon i{
+            color: #007bff; 
+            transform: scale(1.05);
+        }
+        .card-custom:hover {
+            transform: scale(1.05);
+        }
+        #movetop {
+            position: fixed;
+            bottom: 20px; 
+            right: 20px; 
+            z-index: 9999; 
+            animation: pulse 1s infinite alternate; 
+        }
+        @keyframes pulse {
+            0% {
+            transform: scale(1);
+            }
+            100% {
+            transform: scale(1.2);
+            }
+        }
+        .divImg {
+            background-image: url('/images/map.jpg'); 
+            background-size: cover;
+            background-position: center; 
+            max-height: 550px; 
+            width: 100%;
+        }
+        .headinDiv{
+          color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg fixed-top navbar-light border">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/TPS-Logo-New.png" alt="Logo" width="100" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-center ">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://stubbornvarun0705.github.io/tps/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://stubbornvarun0705.github.io/tps/products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  href="https://stubbornvarun0705.github.io/tps/schools.html">Schools</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  href="https://stubbornvarun0705.github.io/tps/testimonials.html">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">FAQ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Company
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                            <li><a class="dropdown-item" href="https://stubbornvarun0705.github.io/tps/about-us.html">About Us</a></li>
+                            <li><a class="dropdown-item active" id="active" aria-current="page" href="https://stubbornvarun0705.github.io/tps/contact-us.html">Contact</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="px-5">
+                <a id="linkbtnMember" class="btn btn-outline-secondary " href="http://www.elearnoncloud.com/login/EL_Login.aspx?C=TPS" target="_blank">Members</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+        
+    <section id="contact-page mt-5 pt-5">
+      <div class="container">
+          <div class="text-center pt-5 mt-5">
+              <h2>How to Reach Us?</h2>
+              <p class="lead">Feel free to reach out to us through any of the following ways.</p>
+          </div>
+      </div>
+  </section>
+
+  <section class="divImg p-5 ">
+    <div class="container ">
+      <div class="row">
+        <div class="col ">
+            <div class="col ">
+                <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCzY8Fkicxjbcr3cCRf9TeXmj7_vO_CGMY'></script>
+                <div style='overflow:hidden;height:350px;width:400px;'><div id='gmap_canvas' style='height:350px;width:400px;'></div>
+                <style>
+                    #gmap_canvas img {
+                        max-width: none !important;
+                        background: none !important;
+                    }
+                </style></div> <a href='https://embedmap.org/' style="color:indigo">.</a>
+                <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=2e5a2d1f5f50d4ed51f44dffbac107592e141c1f'></script>
+                <script type='text/javascript'>function init_map() { var myOptions = { zoom: 16, center: new google.maps.LatLng(13.0200936, 77.64743420000002), mapTypeId: google.maps.MapTypeId.ROADMAP }; map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions); marker = new google.maps.Marker({ map: map, position: new google.maps.LatLng(13.0200936, 77.64743420000002) }); infowindow = new google.maps.InfoWindow({ content: '<strong>Thought Process System LLP.</strong><br>#406, 9th Main, 1st Block HRBR Layout,<br>Bengaluru-540043<br>' }); google.maps.event.addListener(marker, 'click', function () { infowindow.open(map, marker); }); infowindow.open(map, marker); } google.maps.event.addDomListener(window, 'load', init_map);</script>
+            </div>
+        </div>
+        <div class="col">
+            <div class="contact-info">
+                <h4 class="headinDiv"><i class="icons pe-2 fa-solid fa-location-dot fa-beat-fade"></i></i>Address</h4>
+                <p>#406, 9th Main, 1st Block HRBR Layout<br />
+                    Bengaluru-540043.</p>
+                <h4 class="headinDiv"><i class="icons pe-2 fa-solid fa-phone-volume fa-shake"></i>Phone</h4>
+                <p>+91(80) 4090 5848</p>
+                <h4 class="headinDiv"><i class="icons pe-2 fa-solid fa-envelope fa-beat-fade"></i>Email</h4>
+                <p>contact-us@thoughtprocess.co.in</p>
+            </div>
+        </div>
+    </div>
+    </div>
+  </section>
+  <section class="bg-warning">
+    <div class="container">
+      <div class="row mt-5 pt-5 pb-5 >
+        <div class="col-md-12">
+            <div class="status alert alert-success" style="display: none"></div>
+            <form id="main-contact-form" class="contact-form" name="contact-form" action="//formspree.io/contact-us@thoughtprocess.co.in" method="POST">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="Name">Name</label>
+                            <input type="text" name="Name" id="Name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="Email">Email</label>
+                            <input type="email" name="E-mail" id="Email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="Phone">Phone</label>
+                            <input type="tel" name="Phone" id="Phone" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="Company">Company Name</label>
+                            <input type="text" name="Company Name" id="Company" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="Subject">Subject</label>
+                            <input type="text" name="Subject" id="Subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="Message">Message</label>
+                            <textarea name="message" id="Message" class="form-control" rows="3" required placeholder="Your message"></textarea>
+                        </div>
+                        <div class="form-group mt-4">
+                            <button type="submit" name="Submit" class="btn btn-primary btn-lg">Submit Message</button>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" name="_next" value="//thoughtprocess.co.in">
+            </form>
+        </div>
+    </div>
+    </div>
+  </section>
+
+      <footer class="footer bg-dark text-white">
+        <section class="footer-inner-main py-5">
+          <div class="container py-md-4">
+            <div class="row">
+              <div class="col-lg-4 pe-lg-5">
+                <div class="container mt-4 pt-lg-2">
+                    <div class="row align-items-center">
+                      <div class="col-auto">
+                        <h2>
+                          <a class="navbar-brand" href="index.html">
+                            <img src="images/TPS-Logo-New.png" style="width: inherit; height: inherit" alt="Logo">
+                          </a>
+                        </h2>
+                      </div>
+                      <!-- Right side: Social media icons -->
+                      <div class="col-auto">
+                        <ul class="social d-flex justify-content-end align-items-center" style="list-style: none; padding: 0; margin: 0;">
+                          <li class="me-3">
+                            <a href="https://www.facebook.com/#" class="facebook">
+                              <i class="fa-brands fa-facebook fa-2xl"></i>
+                            </a>
+                          </li>
+                          <li class="me-3">
+                            <a href="https://linkedin.com/#" class="linkedin">
+                              <i class="fa-brands fa-linkedin fa-2xl"></i>
+                            </a>
+                          </li>
+                          <li class="me-3">
+                            <a href="https://twitter.com/#" class="twitter">
+                              <i class="fa-brands fa-square-x-twitter fa-2xl"></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://google.com/#" class="google">
+                              <i class="fa-solid fa-envelope fa-2xl"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div> 
+              </div>
+            </div>
+            <div class="below-section mt-lg-5 pt-lg-4">
+              <div class="copyright-footer">
+                    <p class="text-white">
+                        <i class="fa-solid fa-square-phone fa-beat fa-2xl" style="color: #007bff;"></i> &nbsp;Call us any time +91(80) 4090 5848
+                    </p>
+                <p class="CopyRights copyright-column">
+                  &copy; 2024 All Rights Reserved | Thought Process Systems LLP
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </footer>
+      <button onclick="topFunction()" id="movetop" title="Go to top" class="btn btn-primary rounded-circle shadow btn-lg">
+        <i class="fa-solid fa-arrow-turn-up"></i>
+          </button>
+      
+      <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+          scrollFunction();
+        };
+  
+        function scrollFunction() {
+          if (
+            document.body.scrollTop > 20 ||
+            document.documentElement.scrollTop > 20
+          ) {
+            document.getElementById("movetop").style.display = "block";
+          } else {
+            document.getElementById("movetop").style.display = "none";
+          }
+        }
+  
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+      </script>
+      
+    
+    
+
+<!-- Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        // Function to check if the user is in the carousel section
+        function isInCarousel() {
+            var carousel = $('#carouselslide');
+            var scrollPosition = $(window).scrollTop();
+            var carouselTop = carousel.offset().top;
+            var carouselBottom = carouselTop + carousel.outerHeight();
+
+            return (scrollPosition >= carouselTop && scrollPosition <= carouselBottom);
+        }
+
+        //  navigation bar style based on user's position
+        function updateNavbarStyle() {
+            var navbar = $('.navbar');
+            if (isInCarousel()) {
+                navbar.addClass('bg-transparent').removeClass('bg-light');
+            } else {
+                navbar.addClass('bg-light').removeClass('bg-transparent');
+            }
+        }
+
+        // Call updateNavbarStyle initially and on scroll
+        updateNavbarStyle();
+        $(window).scroll(updateNavbarStyle);
+    });
+</script>
+</body>
+</html>
